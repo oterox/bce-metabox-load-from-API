@@ -45,8 +45,8 @@ function ox_meta_box_callback( $post ) {
     wp_nonce_field( 'ox_meta_box', 'ox_meta_box_noncename' );
 
     $current_value = get_post_meta( $post->ID, 'ox_proveedor', true );
-
-	$response = wp_remote_get( 'http://18.217.60.106:8080/users' );
+	//fake IP
+	$response = wp_remote_get( 'http://192.168.1.2:8080/users' );
 	
 	if ( is_array( $response ) ) {
 
